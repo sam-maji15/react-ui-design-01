@@ -33,6 +33,12 @@ function TopBar() {
     )
 }
 
+function FeedArea(prop) {
+  return(
+    <FlexDiv custom_style={{height: '100vw', background: 'green'}} child={<h2>Empty-div</h2>}/>
+    )
+}
+
 class App extends Component {
   constructor() {
     super()
@@ -65,6 +71,7 @@ class App extends Component {
       <div>
       <Menu className='menu-main'/>
       <TopBar/>
+      <FeedArea/>
       </div>
       )
   }
@@ -73,3 +80,14 @@ class App extends Component {
 
 const root = document.getElementById('react-app');
 ReactDOM.render(<App/>, root);
+
+/* ReactDOM.render(<div>
+  <FlexDiv
+    custom_style={{height: '10vh'}}
+        child={<Input/>}/>
+  <FlexDiv
+    custom_style={{
+    background: 'green',
+    height: '10vh'}}
+      child={<Input/>}/>
+</div>,root) */
